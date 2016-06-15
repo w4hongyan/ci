@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="keywords" content="刘畅孟德旭婚礼请柬"/>
+<meta name="description" content="刘畅孟德旭婚礼请柬"/>
+<title>刘畅孟德旭婚礼请柬</title>
+<!--引用百度地图API-->
+<style type="text/css">
+    html,body{margin:0;padding:0;background: #e1f8f6;}
+	*{font-family: '微软雅黑';}
+	.hide{display:none;}
+	.wrap{max-width:640px;width:100%;height:auto;margin:0 auto;position:relative;}
+	.wedding{max-width:640px;width:100%;height:auto;}
+	.wedding img{width: 100%;height: auto;}
+	.btnMenu{width: 33%;float: left;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+	#card_opetation{height:84px;padding:11px 0;position: relative;}
+#card_opetation div{display:inline-block;color:#4fcbbb;font-size:11px;background-size:84px 84px;webkit-background-size:84px 84px; -o-background-size:84px 84px;}
+#card_opetation a .imgBox{width:50%;height: 50%;}
+#card_opetation a .imgBox img{width: 80%;height: auto;}
+#card_opetation a .text{width:52px;}
+#card_opetation a div{float:left;}
+#card_opetation a#wedding_place .text{line-height:24px;height:56px;}
+#card_opetation a#album .text{line-height:24px;height:24px;}
+#card_opetation a .text{line-height:24px;font-size:24px;}
+#card_opetation div a{display:block;position:relative;width:100%;}
+#card_opetation .goBack div{height:60px;width:60px;}
+#card_opetation .goBack  #backToCard  a{width:58px;height:60px;font-size:24px;}
+.topgoBack{height:30px;width:90px;position:absolute;left:0px;top: -30px;color:#fff;background:#4fcbbb;text-align: center;line-height: 30px}
+.goBack{height:30px;width:90px;position:absolute;left:-80px;}
+.goBack #backToCard a{width:90px;height:30px;line-height:30px;display:inline-block;}
+.goBack div{height:30px;display:inline-block;position:relative;overflow:hidden;}
+.greenBtn{color:#fff;background:#4fcbbb;text-align:center;text-decoration:none;cursor:pointer;}
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+/* albumContainer */
+#albumContainer{max-width:640px;width:100%;margin:30px auto;}
+#albumContainer ul{width:30%;list-style:none;float:left;margin-right:3%;}
+#albumContainer ul li{margin-bottom:20px;}
+#albumContainer ul li img{width:100%;}
+#div_message{max-width:640px;width:100%;height:698px;background:url('http://changxu.qiniudn.com/wedding_bg.jpg');background-size: 100%;}
+.message_info{width:60%;margin:0 auto;}
+.message_info input {width: 100%;height: 28px;line-height: 28px;border: 1px solid #4fcbbb;color: #666;font-size: 12px;font-family: '微软雅黑';margin:10px 0;}
+.message_info textarea {width: 100%;height: 184px;line-height: 20px;border: 1px solid #4fcbbb;resize: none;color: #666;font-size: 13px;font-family: '微软雅黑';margin:10px 0;}
+.music{width:235px;height:190px;position:relative;bottom:200px;left:700px;}
+.musicplayer{width:235px;height:190px;}
+@media(min-width: 480px){
+	#card_opetation a .text{line-height:28px;font-size:26px;padding:10px 12px;}
+}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+
+</head>
+<body>
+<div class="wrap">
+	<div class="wedding">
+		<img src="http://changxu.qiniudn.com/wedding.jpg"/>
+	</div>
+	<div class="topgoBack" style="display:none;">
+		<div id="backToCard">
+			<a class="greenBtn" href="javascript:;" onclick="switchMode('wedding');">回到请帖</a>
+		</div>
+		<input type="hidden" id="latitude" value="34.8382">
+		<input type="hidden" id="longitude" value="118.047">
+	</div>
+	<!--百度地图容器-->
+	<div style="max-width:638px;width:98%;height:1000px;border:#ccc solid 1px;margin-top: 30px;" id="dituContent" class="hide">
+	</div>
+	<div id="albumContainer" class="hide">
+		<ul class="col">
+		</ul>
+		<ul class="col">
+		</ul>
+		<ul class="col" style="margin-right:0">
+		</ul>
+	</div>
+	<!--留言板-->
+	<div id="div_message" class="hide">
+		<div class="message_info">
+			<div style="color:#4fcbbb;font-size:18px;padding:20px 0 20px 0;text-align: center;">
+				收到请贴了吧，和新人说点什么吧！
+			</div>
+您的姓名：
+			<br/><input type="text" id="txtName"/></br>
+			<div class="hide">
+				请填写您的名字
+			</div>
+留言内容：
+			<br/><textarea id="txtMessage"/></textarea>
+			<div class="hide">
+				请填写您的留言内容
+			</div>
+			<a href="javascript:void(0);" onclick="send_message()">提交</a>
+		</div>
+	</div>
+	<div style="clear:both">
+	</div>
+	<!--导航按钮-->
+	<div id="card_opetation" style="text-align:center;">
+		<div class="goBack" style="display:none;">
+			<div id="backToCard">
+				<a class="greenBtn" href="javascript:;" onclick="switchMode('wedding');">回到请帖</a>
+			</div>
+		</div>
+		<div class="btnMenu">
+			<a id="wedding_place" href="javascript:;" onclick="switchMode('mapContainer');">
+			<div class="imgBox">
+				<img src="img/wedding_place.png" width="84" height="84">
+			</div>
+			<!-- -->
+			<div class="text">
+				婚宴地址
+			</div>
+			</a>
+		</div>
+		<div class="btnMenu">
+			<a id="album" href="javascript:;" onclick="switchMode('albumContainer');">
+			<div class="imgBox">
+				<img src="img/album.png" width="84" height="84">
+			</div>
+			<div class="text">
+				新人相册
+			</div>
+			</a>
+		</div>
+		<div class="btnMenu">
+			<a id="replay" href="javascript:;" onclick="switchMode('div_message');">
+			<div class="imgBox">
+				<img src="img/receive.png" width="84" height="84">
+			</div>
+			<div class="text">
+				爱墙留言
+			</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div style="clear:both">
+</div>
+<div style="display: none;">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253314837'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1253314837%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var dituheight=$(window).height()-$("#card_opetation").height();
+	$("#dituContent").css("height",dituheight)
+	$("#albumContainer").show();
+	function loadMeinv(){
+		for(var i=1;i<13;i++){//每次加载时模拟随机加载图片
+			var html = "";
+			html = '<li><img src =http://changxu.qiniudn.com/wedding'+i+'.jpg></li>';
+			$minUl = getMinUl();
+			$minUl.append(html);
+		}
+	}
+	loadMeinv();
+	// $(window).on("scroll",function(){
+		// $minUl = getMinUl();
+		// if($minUl.height() <= $(window).scrollTop()+$(window).height()){
+		// 当最短的ul的高度比窗口滚出去的高度+浏览器高度大时加载新图片
+			// loadMeinv();
+		// }
+	// })
+	function getMinUl(){//每次获取最短的ul,将图片放到其后
+		var $arrUl = $("#albumContainer .col");
+		var $minUl =$arrUl.eq(0);
+		$arrUl.each(function(index,elem){
+			if($(elem).height()<$minUl.height()){
+				$minUl = $(elem);
+			}
+		});
+		return $minUl;
+	}
+		$("#albumContainer").hide();
+})
+function switchMode(mode){
+	switch(mode)
+	{
+		case "mapContainer":
+		$(".wedding").hide();
+		$("#albumContainer").hide();
+		$("#div_message").hide();
+		$(".goBack").show();
+		$(".topgoBack").show();
+		$("#dituContent").show();
+		initMap();//创建和初始化地图
+		break;
+		case "albumContainer":
+		$(".wedding").hide();
+		$("#dituContent").hide();
+		$("#div_message").hide();
+		$(".goBack").show();
+		$(".topgoBack").show();
+		$("#albumContainer").show();
+		break;
+		case "div_message":
+		$(".wedding").hide();
+		$("#dituContent").hide();
+		$("#albumContainer").hide();
+		$(".goBack").show();
+		$(".topgoBack").show();
+		$("#div_message").show();
+		break;
+		case "wedding":
+		$("#albumContainer").hide();
+		$(".goBack").hide();
+		$(".topgoBack").hide();
+		$("#dituContent").hide();
+		$("#div_message").hide();
+		$(".wedding").show();
+		break;
+	}
+}
+function send_message(){
+if($("#txtName").val().trim()=="")
+{
+alert("请填写您的姓名");
+return;
+}
+if($("#txtMessage").val().trim()=="")
+{
+alert("请填写您的留言内容");
+return;
+}
+$.post(
+"index.php??m=content&c=index&a=add",{
+	send:$("#txtName").val(),
+	content:$("#txtMessage").val()	,
+	dosubmit:"提 交 字 条"
+	},function(data,status){
+	if(data=='ok')
+	{
+	$("#txtName").val("");
+	$("#txtMessage").val("");
+	alert("留言成功！");
+	}
+	}
+)
+}
+</script>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(118.06190,34.854691);//定义一个中心点坐标
+        map.centerAndZoom(point,14);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    //标注点数组
+    var markerArr = [{title:"婚礼地点：兰陵大酒店",content:"婚礼时间：2014年10月1日10时30分",point:"118.047692|34.84133",isOpen:0,icon:{w:23,h:25,l:115,t:21,x:9,lb:12}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+</script>
+</html>

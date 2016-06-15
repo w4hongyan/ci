@@ -1,0 +1,91 @@
+h1,h2,h3,h4,h5{text-align: center;color:#f07677;}
+ul {
+	padding: 0
+}
+body {
+	color: #696262;
+	font-family: '微软雅黑';
+	background: url(../img/body-bg.jpg) repeat;
+
+}
+a {color:#696262;}
+a:hover{color:#f07677;}
+.fl {
+	float: left
+}
+.btn-site{    color: #fff;
+    background-color: #f07677;
+    border-color: #f07677; margin-left:5px;}
+.control-lable{line-height: 1.42857143;padding: 6px 12px;}
+header {
+	height: 75pt;
+	background: url(../img/header-bg.png) repeat-x 0 -50px
+}
+header ul {
+	list-style-type: none;
+	text-align: center
+}
+header ul,header ul a {
+	color: #999
+}
+header ul.level1 {
+	padding-left: 10px;
+	width: 40%;
+	height: 5pc;
+	line-height: 5pc
+}
+header ul.level1 li {
+	float: left;
+	width: 33%;
+	overflow: hidden;
+}
+header .headerTime {
+	width: 20%;
+	height: 5pc;
+	color: #f07677;
+	font-size:16px;
+	text-align: center;
+	font-weight: 700;
+	line-height: 5pc
+}
+.footer{text-align: center;}
+.swiper-slide img {
+	margin: 0 auto
+}
+.main{min-height: 400px;}
+.main-slide {
+	position: relative
+}
+.slide-mask {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	margin: 0 auto;
+	width: 100%;
+	background: hsla(0,0%,100%,.6);
+	color: #725656;
+	text-align: center;
+	font-size: 30px;
+}
+.slide-mask span {
+	padding: 8px 3px;
+	border-radius: 30px;
+	background: none repeat scroll 0 0 #fff;
+	box-shadow: 0 1px 2px #b7a5a5;
+	color: #f07677;
+	font-size: 30px;
+	font-family: arial
+}
+.slide-mask span i {
+	padding: 4px 12px;
+	border: 1px solid #d2c9c9;
+	border-radius: 30px
+}
+.history{background: #ffffff;width: 80%;margin: 10px auto;box-shadow: 0 0 2px #999999;border-radius: 6px;padding:10px;text-align: center;}
+/********文章详情*********/
+.publishTime{text-align: center;color: #999999}
+/********文章编辑*********/
+.editorBox{height: 310px;}
+#txtContent{height: 220px;}
