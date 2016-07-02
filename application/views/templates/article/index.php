@@ -4,7 +4,7 @@
 <?php
     $num =count($article);
     for($i=0;$i<$num;++$i){?>
-    <div class="col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-6 col-xs-12">
         <a href="<?php echo site_url('article/'.$article[$i]['id']); ?>">
             <div class="row history">
             <?php if($article[$i]['headImg']): ?>
