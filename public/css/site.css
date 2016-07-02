@@ -47,7 +47,9 @@ header .headerTime {
 	font-weight: 700;
 	line-height: 5pc
 }
-.footer{text-align: center;}
+.headimg{margin-bottom: 10px;}
+.headimg img{margin:0 auto; max-height: 270px;}
+.footer{text-align: center;margin-top: 20px;}
 .swiper-slide img {
 	margin: 0 auto
 }
@@ -82,6 +84,7 @@ header .headerTime {
 	border: 1px solid #d2c9c9;
 	border-radius: 30px
 }
-.history{background: #ffffff;width: 80%;margin: 10px auto;box-shadow: 0 0 2px #999999;border-radius: 6px;padding:10px;text-align: center;}
+.history{background: #ffffff;width: 90%;margin: 10px auto;box-shadow: 0 0 2px #999999;border-radius: 6px;padding:10px;text-align: center;}
+
 /********文章详情*********/
 .publishTime{text-align: center;color: #999999}

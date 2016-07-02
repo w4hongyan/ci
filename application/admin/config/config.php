@@ -23,8 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://10.10.3.22:8082/ci/admin';
-
+$config['base_url'] = '/ci/admin';
 /*
 |--------------------------------------------------------------------------
 | Index File

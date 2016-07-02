@@ -6,13 +6,13 @@
  * Time: 上午10:17
  */
 include "Uploader.class.php";
-
+$img_url="/uploadimg";
 /* 上传配置 */
 $base64 = "upload";
 switch (htmlspecialchars($_GET['action'])) {
     case 'uploadimage':
         $config = array(
-            "pathFormat" => $CONFIG['imagePathFormat'],
+            "pathFormat" => $img_url.$CONFIG['imagePathFormat'],
             "maxSize" => $CONFIG['imageMaxSize'],
             "allowFiles" => $CONFIG['imageAllowFiles']
         );
@@ -20,7 +20,7 @@ switch (htmlspecialchars($_GET['action'])) {
         break;
     case 'uploadscrawl':
         $config = array(
-            "pathFormat" => $CONFIG['scrawlPathFormat'],
+            "pathFormat" => $img_url.$CONFIG['scrawlPathFormat'],
             "maxSize" => $CONFIG['scrawlMaxSize'],
             "allowFiles" => $CONFIG['scrawlAllowFiles'],
             "oriName" => "scrawl.png"
@@ -30,7 +30,7 @@ switch (htmlspecialchars($_GET['action'])) {
         break;
     case 'uploadvideo':
         $config = array(
-            "pathFormat" => $CONFIG['videoPathFormat'],
+            "pathFormat" => $img_url.$CONFIG['videoPathFormat'],
             "maxSize" => $CONFIG['videoMaxSize'],
             "allowFiles" => $CONFIG['videoAllowFiles']
         );
@@ -39,7 +39,7 @@ switch (htmlspecialchars($_GET['action'])) {
     case 'uploadfile':
     default:
         $config = array(
-            "pathFormat" => $CONFIG['filePathFormat'],
+            "pathFormat" => $img_url.$CONFIG['filePathFormat'],
             "maxSize" => $CONFIG['fileMaxSize'],
             "allowFiles" => $CONFIG['fileAllowFiles']
         );

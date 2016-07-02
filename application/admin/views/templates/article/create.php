@@ -20,7 +20,9 @@
     </div>
     <div class="form-group">
       <lable class="col-sm-2 control-lable" for="name">图片</lable>
-      <div class="col-sm-10"><input class="form-control" name="headImg" type="text" id="headImg"  value="" readonly />
+      <div class="col-sm-10">
+      <img src="" class="img-responsive" id="imgHeadImg">
+      <input class="form-control" name="headImg" type="hidden" id="headImg"  value="" readonly />
       <a href="javascript:void(0);" onclick="upImage();">上传图片</a>
       </div>
     </div>

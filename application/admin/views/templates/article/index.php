@@ -47,6 +47,7 @@ $(function(){
               $(btn).parent().parent().remove();
 
               swal({title: "删除成功!",
+                    type:"success",
                     timer: 2000,  
                     showConfirmButton: false}); 
             }

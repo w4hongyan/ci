@@ -27,8 +27,8 @@ class Article_model extends CI_Model
 		$data=array(
 				'title'=>$this->input->post('title'),
 				'content'=>$this->input->post('content'),
-				'typeId'=>$this->input->post('typeId')
-
+				'typeId'=>$this->input->post('typeId'),
+				'headImg'=>$this->input->post('headImg')
 				);
 		if($id=='0'){
 			$data['createtime']=date("Y-m-d H:i:s",time());

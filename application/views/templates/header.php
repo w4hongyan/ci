@@ -11,14 +11,14 @@
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<title><?php echo $title; ?></title>
+<title><?php echo $title; ?>-畅旭点滴</title>
 </head>
 <body>
 <header>
 	<ul class="level1 fl">
 	<li><a href="<?php echo site_url('') ?>" >主页</a></li>
 	<li><a href="<?php echo base_url("/public/hunli.html"); ?>">婚礼</a></li>
-	<li>博客</li>
+	<li><a href="<?php echo site_url('/article') ?>" >博客</a></li>
 	</ul>
 	<div class="headerTime fl">
 	畅旭点滴

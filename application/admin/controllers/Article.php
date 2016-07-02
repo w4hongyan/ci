@@ -37,7 +37,7 @@ class Article extends AdminController
 	{
 		$this->load->helper('form');
 		$this->load->library('form_validation');
-		$data['title']='Create a article item';
+		$data['title']='新建文章';
 		$this->form_validation->set_rules('title','Title','required');
 		$this->form_validation->set_rules('content','Content','required');
 		if($this->form_validation->run()===FALSE)

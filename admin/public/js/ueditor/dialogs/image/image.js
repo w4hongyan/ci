@@ -350,7 +350,6 @@
                 acceptExtensions = (editor.getOpt('imageAllowFiles') || []).join('').replace(/\./g, ',').replace(/^[,]/, ''),
                 imageMaxSize = editor.getOpt('imageMaxSize'),
                 imageCompressBorder = editor.getOpt('imageCompressBorder');
-
             if (!WebUploader.Uploader.support()) {
                 $('#filePickerReady').after($('<div>').html(lang.errorNotSupport)).hide();
                 return;
@@ -689,7 +688,8 @@
                         /* 添加额外的GET参数 */
                         var params = utils.serializeParam(editor.queryCommandValue('serverparam')) || '',
                             url = utils.formatUrl(actionUrl + (actionUrl.indexOf('?') == -1 ? '?':'&') + 'encode=utf-8&' + params);
-                        uploader.option('server', url);
+                        //uploader.option('server', url);
+                        uploader.option('server', editor.getOpt('imageUrl'));
                         setState('uploading', files);
                         break;
                     case 'stopUpload':
@@ -698,15 +698,29 @@
                 }
             });
 
+            // uploader.on('uploadBeforeSend', function (file, data, header) {
+            //     //这里可以通过data对象添加POST参数
+            //     header['X_Requested_With'] = 'XMLHttpRequest';
+            // });
             uploader.on('uploadBeforeSend', function (file, data, header) {
-                //这里可以通过data对象添加POST参数
-                header['X_Requested_With'] = 'XMLHttpRequest';
-            });
-
+                        //这里可以通过data对象添加POST参数
+                        header['X_Requested_With'] = 'XMLHttpRequest';
+                        data['key']= file.file.name+'123';
+                        var filename = file.file.name;
+                        var token ="";
+                        $.ajax({
+                                    dataType:'text',
+                                    async:false,
+                                    url:"../../php/getToken.php?key="+filename,
+                                    success:function(data) {
+                                        token = data;
+                                    }
+                        });
+                        data['token'] = token;
+                    });
             uploader.on('uploadProgress', function (file, percentage) {
                 var $li = $('#' + file.id),
                     $percent = $li.find('.progress span');
-
                 $percent.css('width', percentage * 100 + '%');
                 percentages[ file.id ][ 1 ] = percentage;
                 updateTotalProgress();
@@ -715,8 +729,10 @@
             uploader.on('uploadSuccess', function (file, ret) {
                 var $file = $('#' + file.id);
                 try {
+                    console.log(ret._raw || ret);
                     var responseText = (ret._raw || ret),
-                        json = utils.str2json(responseText);
+                       json = utils.str2json(responseText);
+
                     if (json.state == 'SUCCESS') {
                         _this.imageList.push(json);
                         $file.append('<span class="success"></span>');
@@ -724,6 +740,7 @@
                         $file.find('.error').text(json.state).show();
                     }
                 } catch (e) {
+                    console.log(e);
                     $file.find('.error').text(lang.errorServerUpload).show();
                 }
             });

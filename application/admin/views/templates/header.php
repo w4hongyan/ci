@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <!-- 新 Bootstrap 核心 CSS 文件 -->
 <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="<?php echo base_url("/public/css/swiper-3.3.1.min.css"); ?>">
+<link rel="stylesheet" href="//cdn.bootcss.com/Swiper/3.3.1/css/swiper.min.css">
 <link href="//cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo base_url("/public/css/site.css"); ?>">
 
@@ -18,7 +18,7 @@
 <body>
 <header>
 	<ul class="level1 fl">
-	<li><a href="/ci" >主页</a></li>
+	<li><a href="/" >主页</a></li>
 	<li><a href="<?php echo site_url('/article') ?>" >文章</a></li>
 	<li>相册</li>
 	</ul>

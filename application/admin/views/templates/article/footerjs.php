@@ -1,10 +1,10 @@
         <!-- 配置文件 -->
     <script type="text/javascript" src="<?php echo base_url("/public/js/ueditor/ueditor.config.js")?>"></script>
     <!-- 编辑器源码文件 -->
-    <script type="text/javascript" src="<?php echo base_url("/public/js/ueditor/ueditor.all.js")?>"></script>
-      <script type="text/javascript" src="<?php echo base_url("/public/js/ueditor/ueditor.parse.js")?>"></script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/ueditor/1.4.3.1/ueditor.all.min.js"></script>
+      <script type="text/javascript" src="http://apps.bdimg.com/libs/ueditor/1.4.3.1/ueditor.parse.min.js"></script>
    <script type="text/javascript">
-   var Ueditor = UE.getEditor('txtContent');
+   var editor = UE.getEditor('txtContent');
     //重新实例化一个编辑器，防止在上面的editor编辑器中显示上传的图片或者文件
     var _editor = UE.getEditor('upload_ue');
     _editor.ready(function () {

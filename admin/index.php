@@ -204,7 +204,6 @@ switch (ENVIRONMENT)
 		// Ensure there's a trailing slash
 		$system_path = rtrim($system_path, '/').'/';
 	}
-
 	// Is the system path correct?
 	if ( ! is_dir($system_path))
 	{

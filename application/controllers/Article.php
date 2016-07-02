@@ -14,7 +14,7 @@ class Article extends CI_Controller
 	public function index()
 	{
 		$data['article']=$this->article_model->get_article();
-		$data['title']='article Index';
+		$data['title']='文章列表';
 		$this->load->view('templates/header',$data);
 		$this->load->view('templates/article/index',$data);
 		$this->load->view('templates/footer');
@@ -31,23 +31,6 @@ class Article extends CI_Controller
 		$this->load->view('templates/article/view',$data);
 		$this->load->view('templates/footer');
 	}
-	public function create()
-	{
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-		$data['title']='Create a article item';
-		$this->form_validation->set_rules('title','Title','required');
-		$this->form_validation->set_rules('text','Text','required');
-		if($this->form_validation->run()===FALSE)
-		{
-			$this->load->view('templates/header',$data);
-			$this->load->view('templates/article/create');
-			$this->load->view('templates/footer');
-		}else
-		{
-			$this->article_model->set_article();
-			$this->load->view('templates/article/success');
-		}
-	}
+	
 }
 ?>
